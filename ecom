@@ -1,0 +1,137 @@
+import React from "react";
+import {
+    FaFacebookF,
+    FaTwitter,
+    FaInstagram,
+    FaLinkedinIn
+} from "react-icons/fa"
+
+
+import styled from "styled-components";
+import tw from "twin.macro";
+
+
+const NewsletterSection = styled.div`
+    ${tw`
+        w-full
+        p-20
+        bg-yellow-700
+        flex
+        justify-center
+        text-center
+        items-center
+    `}
+`
+
+
+const NewsletterContent = styled.div`
+    ${tw`
+        flex
+        flex-col
+        w-full
+    `}
+`
+const SmallText = styled.span`
+    ${tw`
+        mb-[15px]
+        uppercase
+        text-lg
+        font-normal
+        text-gray-300
+    `}
+`
+const BigText = styled.span`
+    ${tw`
+        uppercase
+        text-xl
+        font-medium
+        mb-[20px]
+        leading-7
+        py-0
+        px-7
+        md:text-2xl 
+    `}
+`
+
+const FormContainer = styled.form`
+    ${tw`
+        flex
+        justify-center
+        text-center
+        items-center
+        gap-1.5
+         
+    `}
+`
+
+const TextHolder = styled.div`
+    ${tw`
+        w-52
+        h-10
+        border border-black
+        py-0
+        px-3
+        text-base
+        outline-0
+        md:w-80
+        lg:w-80
+
+    `}
+`
+const BaseText = styled.div`
+    ${tw`
+        mb-[20px]
+        text-sm
+        text-gray-300
+    `}
+`
+const SocialIcons = styled.div`
+    ${tw`
+        flex
+        justify-center
+        text-center 
+        items-center
+        gap-2.5
+    `}
+`
+const Icons = styled.div`
+    ${tw`
+        w-7
+        h-7
+        bg-gray-600
+        rounded-xl
+        text-white
+        flex
+        justify-center
+        text-center
+        items-center
+
+    `}
+`
+
+export function NewsLetter() {
+    return (
+        <NewsletterSection>
+
+            <NewsletterContent>
+                <SmallText>NewsLetter</SmallText>
+                <BigText>Sign Up for latest updates and offers</BigText>
+                <FormContainer>
+                    <TextHolder>
+                        <input type="email" placeholder="Email Address" ></input>
+                    </TextHolder>
+                    <button>Subscribe</button>
+                </FormContainer>
+                <BaseText>Will be used in accordance with our Privacy Policy</BaseText>
+                <SocialIcons>
+                    <Icons>
+                        <FaFacebookF />
+                        <FaInstagram />
+                        <FaLinkedinIn />
+                        <FaTwitter />
+                    </Icons>
+                </SocialIcons>
+            </NewsletterContent>
+        </NewsletterSection>
+    )
+}
